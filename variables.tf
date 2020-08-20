@@ -20,25 +20,25 @@ variable "create_dkim_records" {
 
 variable "rule_sets" {
   description = "Amazon SES Rule Sets"
-  type        = "list"
+  type        = list(string)
   default     = []
 }
 
 variable "receipt_filter_name" {
   description = "Amazon SES IP Adress Filter name of the filter"
-  type        = "list"
+  type        = list(string)
   default     = []
 }
 
 variable "receipt_filter_cidr" {
   description = "Amazon SES IP Address Filter IP address or address range to filter, in CIDR notation"
-  type        = "list"
+  type        = list(string)
   default     = []
 }
 
 variable "receipt_filter_policy" {
   description = "Amazon SES IP Address Filter policy to 'Allow' or 'Block'"
-  type        = "list"
+  type        = list(string)
   default     = []
 }
 
@@ -69,7 +69,7 @@ variable "receipt_rule_rule_set_name" {
 
 variable "receipt_rule_recipients" {
   description = "AWS Receipt Rule recipients list"
-  type        = "list"
+  type        = list(string)
   default     = []
 }
 
@@ -85,13 +85,13 @@ variable "receipt_rule_scan_enabled" {
 
 variable "receipt_rule_header_names" {
   description = "List of headers names to be added to rule"
-  type        = "list"
+  type        = list(string)
   default     = []
 }
 
 variable "receipt_rule_header_values" {
   description = "List of headers values to be added to rule"
-  type        = "list"
+  type        = list(string)
   default     = []
 }
 
